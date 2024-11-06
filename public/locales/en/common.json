@@ -16,6 +16,7 @@
 	"products": "Products",
 	"categories": "Categoires",
 	"submit": "Submit",
+	"noResults": "No results",
 	"back": "Go Back",
 	"deleteConfirm": "Are you sure you want to delete {{item}}?",
 	"active": "Active",

@@ -1,5 +1,5 @@
 import {useTranslation} from 'react-i18next';
-import {useSnackbar} from 'notistack';
+import {enqueueSnackbar} from 'notistack';
 
 import {Paper, Table, TableBody, TableContainer} from '@mui/material';
 
@@ -18,7 +18,6 @@ import {CategoriesTableHead} from './table-head';
 
 export const CategoriesTable = ({data, isLoading}: {data?: ApiCategory[]; isLoading: boolean}) => {
   const {t} = useTranslation();
-  const {enqueueSnackbar} = useSnackbar();
   const deleteItem = useMutationCategoriesDelete();
 
   //
@@ -30,7 +29,7 @@ export const CategoriesTable = ({data, isLoading}: {data?: ApiCategory[]; isLoad
       {id: item.categoryId},
       {
         onSuccess: async result => {
-          result?.meta?.message && enqueueSnackbar(result?.meta?.message, {variant: 'success'});
+          result?.meta?.message && enqueueSnackbar(result?.meta?.message, {});
         },
         onError: err => {
           enqueueSnackbar(err?.message || 'unknown error', {variant: 'error'});

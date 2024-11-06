@@ -16,6 +16,7 @@
 	"products": "المنتجات",
 	"categories": "الأقسام",
 	"submit": "إرسال",
+	"noResults": "لا توجد نتائج",
 	"back": "رجوع",
 	"deleteConfirm": "هل أنت متأكد أنك تريد حذف {{item}}؟",
 	"active": "نشط",

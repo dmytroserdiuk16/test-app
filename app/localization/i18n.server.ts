@@ -12,8 +12,8 @@ import {getSupportedLanguageFromRequest} from './resource';
 
 const i18next = new RemixI18Next({
   detection: {
-    supportedLanguages: i18n.supportedLngs as any,
-    fallbackLanguage: i18n.fallbackLng as any,
+    supportedLanguages: i18n.supportedLngs,
+    fallbackLanguage: i18n.fallbackLng,
     findLocale: async request => {
       return getSupportedLanguageFromRequest(request) as string;
     },
